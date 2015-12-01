@@ -1,0 +1,201 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fourier}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{placeins}
+%\author{Juan Carlos Apitz, ID 012523821}
+%\title{Feature Selection Via Logistic Elastic Net Regression in Genetic Cancer Research}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	%\includegraphics[width=0.15\textwidth]{example-image-1x1}\par\vspace{1cm}
+	{\scshape\Large Feature Selection Via Logistic Elastic Net Regression in Genetic Cancer Research \par}
+	\vspace{1cm}
+	{\scshape\large A PROJECT REPORT\par}
+	%\vspace{1.5cm}
+	{\large Presented to Department of Mathematics and Statistics California State University, Long Beach\par}
+	\vspace{4cm}
+	{\large In Partial Fulfillment of the Requirements for the Degree Master of Science in Mathematics Option in Statistics\par}
+	\vspace{3cm}
+	{\large Faculty Reviewer:\par}
+	\vspace{0.5cm}
+	{\large Kagba Suaray, Ph.D.}
+	\vfill
+	\large By ~Juan Carlos Apitz\\
+	\large M.S., 2016, California State University, Long Beach\par
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+
+
+
+
+%\maketitle
+%\begin{center}
+%A Methodology Report\\
+%
+
+%\end{center}
+%\clearpage
+% Short Cuts%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\normalpdf}[1]{f \big( #1 \text{; } \mu,\sigma^2 \big) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{1}{2 \sigma^2}(#1-\mu)^2}}
+
+\newcommand{\expectedvalue}[1]{E \left(#1\right)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Question 1}
+The pdf of the random variable Y is:
+\[
+\normalpdf{y}
+\]
+Since Y is iid, we obtain the likelihood as follows:
+\[
+L\big(\mu\big) = \prod_{i=1}^n \left(2 \pi \sigma^2\right)^{-\frac{1}{2}} e^{-\frac{1}{2 \sigma^2}(y_i-\mu)^2}
+\]
+
+\[
+= \left(2 \pi \sigma^2\right)^{-\frac{n}{2}} e^{-\frac{1}{2 \sigma^2}\sum_{i=1}^n(y_i-\mu)^2}
+\]
+To find the MLE of $\mu$, we proceed to maximize the $\log$ of $L\big(\mu\big)$ with respect to $\mu$. This is equivalent to maximizing $L\big(\mu\big)$ with respect to $\mu$. To accomplish this we can use the first and second derivatives tests from calculus to find the MLE:
+\[
+\ln{L\big(\mu\big)}=-\frac{n}{2}\ln{2 \pi \sigma^2}-\frac{1}{2 \sigma^2}\sum_{i=1}^n \big(y_i - \mu\big)^2
+\]
+
+\[
+\frac{d \ln{L\big(\mu\big)}}{d\mu}=\frac{1}{\sigma^2}\left(\sum_{i=1}^n y_i - n \mu \right)\overset{set}{=}0
+\]
+
+\[
+\hat{\mu}_{mle}=\frac{1}{n}\sum_{i=1}^n y_i
+\]
+The second derivative test confirms that $\hat{\mu}_{mle}$ is indeed a maximum:
+\[
+\frac{d^2 \ln{L\big(\mu\big)}}{d\mu^2}=-\frac{n}{\sigma^2}<0
+\]
+\clearpage
+\section*{Question 2}
+To find $\expectedvalue{\bar{Y}}$, we use the fact that the random variable $Y$ is distributed iid normal. Therefore we know that:
+
+\[
+\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}} \sim N(0,1)
+\]
+Then:
+\[
+\expectedvalue{\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}}}=0
+\]
+\[
+\expectedvalue{\bar{Y}-\mu}=0
+\]
+\[
+\expectedvalue{\bar{Y}}=\mu
+\]
+For the variance, we use the definition:
+\[
+V\left(\bar{Y}\right)=\expectedvalue{\bar{Y}-\expectedvalue{\bar{Y}}}^2
+\]
+and given that $Y$ is distributed iid normal we know:
+\[
+\expectedvalue{\dfrac{\bar{Y}-\mu}{\frac{\sigma}{\sqrt{n}}}-0}^2=1
+\]
+then:
+\[
+\expectedvalue{\bar{Y}-\mu}^2 = \dfrac{\sigma^2}{n}
+\]
+
+\[
+\expectedvalue{\bar{Y}-\expectedvalue{\bar{Y}}}^2 = \dfrac{\sigma^2}{n}
+\]
+
+\[
+V\left(\bar{Y}\right) = \dfrac{\sigma^2}{n}
+\]
+\clearpage
+\section*{Question 3}
+We can use linear algebra to solve the system of normal equations:
+\[
+\begin{pmatrix}
+n & \sum_i x_i & \sum_i y_i\\
+\\
+\sum_i x_i & \sum_i x_i^2 & \sum_i x_i y_i
+\end{pmatrix}
+\]
+Dividing the first row by $n$:
+\[
+\begin{pmatrix}
+1 & \bar{x} & \bar{y}\\
+\\
+\sum_i X_i & \sum_i x_i^2 & \sum_i x_i y_i
+\end{pmatrix}
+\]
+Multiply the first row by $\sum_i x_i$ and subtract it from the second row to get the second pivot:
+\[
+\begin{pmatrix}
+1 & \bar{x} & \bar{y}\\
+\\
+0 & \sum_i x_i^2 - \bar{x}\sum_i x_i & \sum_i x_i y_i
+ - \bar{y}\sum_i x_i
+ \end{pmatrix}
+\]
+The above result implies that:
+\[
+b_1 = \dfrac{\sum_i x_i y_i
+ - \bar{y}\sum_i x_i}{\sum_i x_i^2 - \bar{x}\sum_i x_i}
+\]
+To show that:
+\[
+b_1 = \dfrac{\sum_i\left(x_i-\bar{x}\right)\left(y_i - \bar{x}\right)}{\sum_i\left(x_i-\bar{x}\right)^2}
+\]
+expand $\sum_i\left(x_i-\bar{x}\right)\left(y_i - \bar{x}\right)$:
+\[
+= \sum_i\left(x_iy_i-\bar{y}x_i-\bar{x}y_i+\bar{x}\bar{y}\right)
+\]
+
+\[
+= \sum_i x_i y_i-2\bar{y}\sum_i x_i+n\bar{x}\bar{y}
+\]
+
+\[
+= \sum_i x_i y_i-2\bar{y}\sum_i x_i+\bar{y}\sum_i x_i
+\]
+
+\begin{equation} \label{eq:1}
+= \sum_i x_i y_i-\bar{y}\sum_i x_i
+\end{equation}
+Now expand $\sum_i\left(x_i-\bar{x}\right)^2$:
+
+\[
+=\sum_i \left(x_i^2-2x_i\bar{x}+\bar{x}^2\right)
+\]
+
+\[
+=\sum_i x_i^2-2\bar{x} \sum_i x_i+n \bar{x}^2
+\]
+
+\[
+=\sum_i x_i^2-2\bar{x} \sum_i x_i+\bar{x}\sum_i x_i
+\]
+
+\begin{equation} \label{eq:2}
+=\sum_i x_i^2-\bar{x} \sum_i x_i
+\end{equation}
+Based on result (\ref{eq:1}) and result (\ref{eq:2}), we have shown that:
+
+\[
+\dfrac{\sum_i\left(x_i-\bar{x}\right)\left(y_i - \bar{x}\right)}{\sum_i\left(x_i-\bar{x}\right)^2} = \dfrac{\sum_i x_i y_i
+ - \bar{y}\sum_i x_i}{\sum_i x_i^2 - \bar{x}\sum_i x_i} = b_1
+\]
+\end{document}

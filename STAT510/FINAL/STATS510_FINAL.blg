@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: STATS510_FINAL.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Warning--empty publisher in nachtsheim2004applied
+You've used 9 entries,
+            2118 wiz_defined-function locations,
+            557 strings with 6006 characters,
+and the built_in function-call counts, 3649 in all, are:
+= -- 333
+> -- 239
+< -- 2
++ -- 97
+- -- 86
+* -- 299
+:= -- 630
+add.period$ -- 27
+call.type$ -- 9
+change.case$ -- 66
+chr.to.int$ -- 0
+cite$ -- 10
+duplicate$ -- 111
+empty$ -- 237
+format.name$ -- 86
+if$ -- 723
+int.to.chr$ -- 0
+int.to.str$ -- 9
+missing$ -- 12
+newline$ -- 48
+num.names$ -- 18
+pop$ -- 71
+preamble$ -- 1
+purify$ -- 60
+quote$ -- 0
+skip$ -- 75
+stack$ -- 0
+substring$ -- 211
+swap$ -- 19
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 1
+while$ -- 29
+width$ -- 10
+write$ -- 98
+(There was 1 warning)

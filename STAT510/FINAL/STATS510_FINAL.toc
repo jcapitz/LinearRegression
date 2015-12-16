@@ -1,0 +1,16 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}The Curse of Dimensionality: When $\mathbf {p>>n}$}{3}
+\contentsline {section}{\numberline {3}Classification and Gene Selection in Cancer Genomics}{4}
+\contentsline {subsection}{\numberline {3.1}The Naderi et al Breast Cancer Microarray Dataset}{4}
+\contentsline {subsection}{\numberline {3.2}Regularized Logistic Regression}{5}
+\contentsline {subsection}{\numberline {3.3}Fitting the Regularized Logistic Model to the Breast Cancer Data}{6}
+\contentsline {subsubsection}{\numberline {3.3.1}Monte Carlo Procedure for Variable Selection}{6}
+\contentsline {subsection}{\numberline {3.4}Choosing the Tuning Parameters, $\lambda $ and $\alpha $}{7}
+\contentsline {section}{\numberline {4}Model Evaluation }{8}
+\contentsline {subsection}{\numberline {4.1}Evaluation Procedure}{8}
+\contentsline {subsection}{\numberline {4.2}Evaluation Results}{9}
+\contentsline {section}{\numberline {5}Conclusions}{9}
+\contentsline {section}{\numberline {6}Appendix: Python Code}{11}
+\contentsline {subsection}{\numberline {6.1}Model Fitting}{12}
+\contentsline {subsection}{\numberline {6.2}Model Validation}{13}

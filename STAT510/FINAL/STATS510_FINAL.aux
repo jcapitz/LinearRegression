@@ -3,5 +3,61 @@
 \@writefile{toc}{\select@language{english}}
 \@writefile{lof}{\select@language{english}}
 \@writefile{lot}{\select@language{english}}
+\citation{*}
+\citation{friedman2001elements}
+\citation{tibshirani1996regression}
+\citation{tibshirani1996regression}
+\citation{friedman2001elements}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}The Curse of Dimensionality: When $\mathbf  {p>>n}$}{3}}
 \newlabel{eq:1}{{1}{3}}
-\newlabel{eq:2}{{2}{3}}
+\citation{zou2005regularization}
+\citation{naderi2007gene}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Dataset summary and example of three rows (samples) by three columns (genes).}}{4}}
+\newlabel{table:1}{{1}{4}}
+\newlabel{eq:2}{{2}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Classification and Gene Selection in Cancer Genomics}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}The Naderi et al Breast Cancer Microarray Dataset}{4}}
+\citation{nachtsheim2004applied}
+\citation{domingos2015master}
+\citation{tikhonov1963solution}
+\citation{tibshirani1996regression}
+\citation{scikit-learn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Regularized Logistic Regression}{5}}
+\newlabel{eq:3}{{3}{5}}
+\newlabel{eq:4}{{4}{5}}
+\newlabel{eq:5}{{5}{5}}
+\newlabel{eq:6}{{6}{5}}
+\newlabel{eq:7}{{7}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The Sigmoidal Response Function. This function arises naturally for binary responses with values \{0,1\}. Pedro Domingos calls it "the most important curve in the world" in his recent book, The Master Algorithm.}}{6}}
+\newlabel{fig:1}{{1}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Fitting the Regularized Logistic Model to the Breast Cancer Data}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}Monte Carlo Procedure for Variable Selection}{6}}
+\newlabel{section:mc}{{3.3.1}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces The top five selected genes. We expect that the most significant genes are selected frequently, the absolute value of their coefficient is relatively large, and they are significant in terms of p-value.}}{7}}
+\newlabel{table:2}{{2}{7}}
+\newlabel{eq:8}{{8}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Choosing the Tuning Parameters, $\lambda $ and $\alpha $}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Correlation structure of the first four significant genes. The genes selected exhibit a non-trivial degree of correlation. This is expected as the penalty term $\alpha \delimiter "026B3B0 \boldsymbol  {\beta }\delimiter "026B3B0 _2$ allows the algorithm to select groups of genes that are correlated while shrinking their coefficient.}}{8}}
+\newlabel{fig:2}{{2}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Model Evaluation }{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Evaluation Procedure}{8}}
+\citation{Glaab2012}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation Results}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces ROC curve for the Breast Cancer Logistic Classifier.}}{9}}
+\newlabel{fig:3}{{3}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Appendix: Python Code}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Model Fitting}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Model Validation}{13}}
+\bibstyle{plain}
+\bibdata{bibliography}
+\bibcite{domingos2015master}{1}
+\bibcite{friedman2001elements}{2}
+\bibcite{Glaab2012}{3}
+\bibcite{nachtsheim2004applied}{4}
+\bibcite{naderi2007gene}{5}
+\bibcite{scikit-learn}{6}
+\bibcite{tibshirani1996regression}{7}
+\bibcite{tikhonov1963solution}{8}
+\bibcite{zou2005regularization}{9}

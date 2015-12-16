@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+
+\bibitem{domingos2015master}
+Pedro Domingos.
+\newblock {\em {T}he {M}aster {A}lgorithm: {H}ow the {Q}uest for the {U}ltimate
+  {L}earning {M}achine {W}ill {R}emake {O}ur {W}orld}.
+\newblock Basic Books, 2015.
+
+\bibitem{friedman2001elements}
+Jerome Friedman, Trevor Hastie, and Robert Tibshirani.
+\newblock {\em The {E}lements of {S}tatistical {L}earning}, volume~1.
+\newblock Springer series in statistics Springer, Berlin, 2001.
+
+\bibitem{Glaab2012}
+Enrico Glaab, Jaume Bacardit, Jonathan~M. Garibaldi, and Natalio Krasnogor.
+\newblock Using rule-based machine learning for candidate disease gene
+  prioritization and sample classification of cancer gene expression data.
+\newblock {\em PLoS ONE}, 7(7):e39932, July 2012.
+
+\bibitem{nachtsheim2004applied}
+Christopher~J Nachtsheim, John Neter, Michael~H Kutner, and William Wasserman.
+\newblock {\em Applied {L}inear {R}egression {M}odels}.
+\newblock 2004.
+
+\bibitem{naderi2007gene}
+A~Naderi, AE~Teschendorff, NL~Barbosa-Morais, SE~Pinder, AR~Green, DG~Powe, JFR
+  Robertson, S~Aparicio, IO~Ellis, JD~Brenton, et~al.
+\newblock A gene-expression signature to predict survival in breast cancer
+  across independent data sets.
+\newblock {\em Oncogene}, 26(10):1507--1516, 2007.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{tibshirani1996regression}
+Robert Tibshirani.
+\newblock Regression {S}hrinkage and {S}election {V}ia the {L}asso.
+\newblock {\em Journal of the Royal Statistical Society. Series B
+  (Methodological)}, pages 267--288, 1996.
+
+\bibitem{tikhonov1963solution}
+A.N. Tikhonov.
+\newblock Solution of incorrectly problems and the regularization method.
+\newblock {\em {S}oviet {M}athematics {D}oklady}, 4:1035--1038, 1963.
+
+\bibitem{zou2005regularization}
+Hui Zou and Trevor Hastie.
+\newblock Regularization and {V}ariable {S}election {V}ia the {E}lastic {N}et.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 67(2):301--320, 2005.
+
+\end{thebibliography}
